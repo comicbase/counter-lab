@@ -1,4 +1,4 @@
-# MyDemo1-MVVM Kotlin 初学者导读
+# CounterLab-MVVM Kotlin 初学者导读
 
 这份导读面向还没有系统接触过 Kotlin 的同学。它不会把每一行代码都拆成语法词典，而是带你抓住这个 MVVM 演进项目里最重要的几个问题：
 
@@ -7,7 +7,7 @@
 - Kotlin 里哪些语法是你必须先看懂的；
 - Compose、ViewModel、StateFlow 是怎样配合起来的。
 
-这个项目是从最初的 `Hello Android!` 模板演进来的。现在它变成了一个小计数器页面：页面上有 `+1`、`-1`、`Reset` 三个操作。
+`CounterLab-MVVM` 是从 `CounterLab-Template` 这个 Android Studio 单模块 Jetpack Compose 模板项目演进来的。模板项目原本只显示 `Hello Android!`，这个版本把它演进成了一个小计数器页面：页面上有 `+1`、`-1`、`Reset` 三个操作。
 
 ## 1. 先用一句话看懂这个项目
 
@@ -22,10 +22,10 @@
 本项目的关键文件是：
 
 ```text
-app/src/main/java/com/example/mydemo1mvvm/MainActivity.kt
-app/src/main/java/com/example/mydemo1mvvm/ui/CounterScreen.kt
-app/src/main/java/com/example/mydemo1mvvm/ui/CounterViewModel.kt
-app/src/main/java/com/example/mydemo1mvvm/data/CounterRepository.kt
+CounterLab-MVVM/app/src/main/java/com/example/mydemo1mvvm/MainActivity.kt
+CounterLab-MVVM/app/src/main/java/com/example/mydemo1mvvm/ui/CounterScreen.kt
+CounterLab-MVVM/app/src/main/java/com/example/mydemo1mvvm/ui/CounterViewModel.kt
+CounterLab-MVVM/app/src/main/java/com/example/mydemo1mvvm/data/CounterRepository.kt
 ```
 
 可以先按这个关系理解：

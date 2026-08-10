@@ -1,6 +1,8 @@
-# MyDemo1-MVI Kotlin 初学者导读
+# CounterLab-MVI Kotlin 初学者导读
 
-这份导读面向还没有系统接触过 Kotlin 的同学。MVI 比 MVVM 多几个新词，比如 `Intent`、`State`、`Effect`、`Reducer`，刚开始看会有点像突然进了控制室：按钮很多，但其实每个按钮职责都很清楚。
+这份导读面向还没有系统接触过 Kotlin 的同学。`CounterLab-MVI` 是从 `CounterLab-Template` 这个 Android Studio 单模块 Jetpack Compose 模板项目演进来的 MVI 版本。
+
+MVI 比 MVVM 多几个新词，比如 `Intent`、`State`、`Effect`、`Reducer`，刚开始看会有点像突然进了控制室：按钮很多，但其实每个按钮职责都很清楚。
 
 这份文档会用通俗语言说明：
 
@@ -22,12 +24,12 @@
 关键文件如下：
 
 ```text
-app/src/main/java/com/example/mydemo1mvi/MainActivity.kt
-app/src/main/java/com/example/mydemo1mvi/ui/CounterScreen.kt
-app/src/main/java/com/example/mydemo1mvi/ui/CounterContract.kt
-app/src/main/java/com/example/mydemo1mvi/ui/CounterReducer.kt
-app/src/main/java/com/example/mydemo1mvi/ui/CounterViewModel.kt
-app/src/main/java/com/example/mydemo1mvi/data/CounterRepository.kt
+CounterLab-MVI/app/src/main/java/com/example/mydemo1mvi/MainActivity.kt
+CounterLab-MVI/app/src/main/java/com/example/mydemo1mvi/ui/CounterScreen.kt
+CounterLab-MVI/app/src/main/java/com/example/mydemo1mvi/ui/CounterContract.kt
+CounterLab-MVI/app/src/main/java/com/example/mydemo1mvi/ui/CounterReducer.kt
+CounterLab-MVI/app/src/main/java/com/example/mydemo1mvi/ui/CounterViewModel.kt
+CounterLab-MVI/app/src/main/java/com/example/mydemo1mvi/data/CounterRepository.kt
 ```
 
 可以先按这个关系理解：

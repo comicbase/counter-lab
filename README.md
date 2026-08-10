@@ -1,12 +1,14 @@
 # Compose Counter Architecture Lab
 
-这个仓库用于对比同一个 Jetpack Compose 计数器功能在两种 Android 架构下的实现方式：
+这个仓库记录了一个 Android Studio 单模块 Jetpack Compose 模板项目的三段学习路径：
 
+- `CounterLab-Template`：原始模板项目，只显示 `Hello Android!`
 - `CounterLab-MVVM`：向 MVVM 演进的版本
 - `CounterLab-MVI`：向 MVI 演进的版本
 
 它适合 Kotlin / Android 初学者用来观察：
 
+- Android Studio Compose 模板项目的基本骨架；
 - Compose 页面如何显示状态；
 - ViewModel 如何管理状态；
 - Repository 在简单项目中如何承担数据规则；
@@ -16,6 +18,10 @@
 
 ```text
 compose-counter-architecture-lab/
+├── CounterLab-Template/
+│   ├── app/
+│   ├── docs/kotlin-guide-for-beginners.md
+│   └── README.md
 ├── CounterLab-MVVM/
 │   ├── app/
 │   ├── docs/kotlin-guide-for-beginners.md
@@ -26,7 +32,21 @@ compose-counter-architecture-lab/
     └── README.md
 ```
 
-## 两个版本的核心区别
+## 三个目录之间的关系
+
+```text
+CounterLab-Template
+        │
+        ├── 演进为 CounterLab-MVVM
+        │       UI 展示 UiState，用户操作调用 ViewModel 方法
+        │
+        └── 演进为 CounterLab-MVI
+                UI 展示 State，用户操作发送 Intent
+```
+
+`CounterLab-Template` 是起点，用来学习 Kotlin + Compose 模板项目的最小结构；`CounterLab-MVVM` 和 `CounterLab-MVI` 则在同一个计数器功能上展示两种架构演进方式。
+
+## MVVM 和 MVI 的核心区别
 
 ### MVVM
 
@@ -76,15 +96,21 @@ CounterScreen(
 
 如果你是 Kotlin / Android 初学者，建议按这个顺序阅读：
 
-1. 先读 `CounterLab-MVVM/docs/kotlin-guide-for-beginners.md`
-2. 再读 `CounterLab-MVI/docs/kotlin-guide-for-beginners.md`
-3. 对比两个项目中的 `CounterScreen.kt`
-4. 对比两个项目中的 `CounterViewModel.kt`
-5. 最后阅读 MVI 版本中的 `CounterContract.kt` 和 `CounterReducer.kt`
+1. 先读 `CounterLab-Template/docs/kotlin-guide-for-beginners.md`
+2. 再读 `CounterLab-MVVM/docs/kotlin-guide-for-beginners.md`
+3. 最后读 `CounterLab-MVI/docs/kotlin-guide-for-beginners.md`
+4. 对比 `CounterLab-MVVM/app/src/main/java/com/example/mydemo1mvvm/ui/CounterScreen.kt` 和 `CounterLab-MVI/app/src/main/java/com/example/mydemo1mvi/ui/CounterScreen.kt`
+5. 对比两个项目中的 `CounterViewModel.kt`
+6. 最后阅读 MVI 版本中的 `CounterContract.kt` 和 `CounterReducer.kt`
 
 ## 构建方式
 
-两个目录都是独立 Android 项目，可以分别进入目录构建：
+三个目录都是独立 Android 项目，可以分别进入目录构建：
+
+```bash
+cd CounterLab-Template
+./gradlew testDebugUnitTest assembleDebug
+```
 
 ```bash
 cd CounterLab-MVVM
@@ -103,4 +129,3 @@ cd CounterLab-MVI
 - Android Architecture：`ViewModel`、`StateFlow`
 - MVVM：View / ViewModel / Repository 的分工
 - MVI：State / Intent / Effect / Reducer 的单向数据流
-
