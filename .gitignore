@@ -1,0 +1,16 @@
+.DS_Store
+local.properties
+.gradle/
+build/
+captures/
+*.iml
+.idea/
+
+# Android / Kotlin generated files
+**/build/
+**/.gradle/
+**/local.properties
+
+# Logs
+*.log
+
