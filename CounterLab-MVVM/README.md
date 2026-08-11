@@ -27,11 +27,16 @@ MVVM 版本的核心思路是：
 
 ```text
 CounterLab-MVVM/
-├── app/src/main/java/com/example/mydemo1mvvm/MainActivity.kt
-├── app/src/main/java/com/example/mydemo1mvvm/ui/CounterScreen.kt
-├── app/src/main/java/com/example/mydemo1mvvm/ui/CounterViewModel.kt
-├── app/src/main/java/com/example/mydemo1mvvm/data/CounterRepository.kt
-└── docs/kotlin-guide-for-beginners.md
+├── app/src/main/java/com/example/mydemo1mvvm/
+│   ├── MainActivity.kt              # Activity 宿主，连接 ViewModel 和 Compose 页面
+│   ├── ui/
+│   │   ├── CounterScreen.kt         # View：无状态 Composable
+│   │   ├── CounterViewModel.kt      # ViewModel：持有 StateFlow
+│   │   └── theme/                   # Compose 主题
+│   └── data/
+│       └── CounterRepository.kt     # Repository 接口 + InMemory 实现
+└── docs/
+    └── kotlin-guide-for-beginners.md
 ```
 
 ## MVVM 角色对应
@@ -62,4 +67,3 @@ docs/kotlin-guide-for-beginners.md
 ```bash
 ./gradlew testDebugUnitTest assembleDebug
 ```
-

@@ -96,12 +96,40 @@ CounterScreen(
 
 如果你是 Kotlin / Android 初学者，建议按这个顺序阅读：
 
-1. 先读 `CounterLab-Template/docs/kotlin-guide-for-beginners.md`
-2. 再读 `CounterLab-MVVM/docs/kotlin-guide-for-beginners.md`
-3. 最后读 `CounterLab-MVI/docs/kotlin-guide-for-beginners.md`
-4. 对比 `CounterLab-MVVM/app/src/main/java/com/example/mydemo1mvvm/ui/CounterScreen.kt` 和 `CounterLab-MVI/app/src/main/java/com/example/mydemo1mvi/ui/CounterScreen.kt`
-5. 对比两个项目中的 `CounterViewModel.kt`
-6. 最后阅读 MVI 版本中的 `CounterContract.kt` 和 `CounterReducer.kt`
+1. 先读模板项目的 Kotlin 初学者导读；
+2. 再读 MVVM 演进项目的 Kotlin 初学者导读；
+3. 最后读 MVI 演进项目的 Kotlin 初学者导读；
+4. 对比两个演进项目里的 `ui/CounterScreen.kt`
+5. 对比两个演进项目里的 `ui/CounterViewModel.kt`
+6. 最后阅读 MVI 版本里的 `ui/CounterContract.kt` 和 `ui/CounterReducer.kt`
+
+三份导读在这里：
+
+```text
+compose-counter-architecture-lab/
+├── CounterLab-Template/
+│   └── docs/kotlin-guide-for-beginners.md
+├── CounterLab-MVVM/
+│   └── docs/kotlin-guide-for-beginners.md
+└── CounterLab-MVI/
+    └── docs/kotlin-guide-for-beginners.md
+```
+
+相关文件可以按这个结构找：
+
+```text
+compose-counter-architecture-lab/
+├── CounterLab-MVVM/
+│   └── app/src/main/java/com/example/mydemo1mvvm/ui/
+│       ├── CounterScreen.kt
+│       └── CounterViewModel.kt
+└── CounterLab-MVI/
+    └── app/src/main/java/com/example/mydemo1mvi/ui/
+        ├── CounterScreen.kt
+        ├── CounterViewModel.kt
+        ├── CounterContract.kt
+        └── CounterReducer.kt
+```
 
 ## 构建方式
 

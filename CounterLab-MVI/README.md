@@ -30,13 +30,18 @@ MVI 版本的核心思路是：
 
 ```text
 CounterLab-MVI/
-├── app/src/main/java/com/example/mydemo1mvi/MainActivity.kt
-├── app/src/main/java/com/example/mydemo1mvi/ui/CounterScreen.kt
-├── app/src/main/java/com/example/mydemo1mvi/ui/CounterContract.kt
-├── app/src/main/java/com/example/mydemo1mvi/ui/CounterReducer.kt
-├── app/src/main/java/com/example/mydemo1mvi/ui/CounterViewModel.kt
-├── app/src/main/java/com/example/mydemo1mvi/data/CounterRepository.kt
-└── docs/kotlin-guide-for-beginners.md
+├── app/src/main/java/com/example/mydemo1mvi/
+│   ├── MainActivity.kt              # Activity 宿主，连接 ViewModel 和 Compose 页面
+│   ├── ui/
+│   │   ├── CounterScreen.kt         # View：显示 State、发送 Intent、收集 Effect
+│   │   ├── CounterContract.kt       # Contract：定义 State / Intent / Effect
+│   │   ├── CounterReducer.kt        # Reducer：状态计算器
+│   │   ├── CounterViewModel.kt      # ViewModel：dispatch Intent
+│   │   └── theme/                   # Compose 主题
+│   └── data/
+│       └── CounterRepository.kt     # Repository 接口 + InMemory 实现
+└── docs/
+    └── kotlin-guide-for-beginners.md
 ```
 
 ## MVI 角色对应
@@ -70,4 +75,3 @@ docs/kotlin-guide-for-beginners.md
 ```bash
 ./gradlew testDebugUnitTest assembleDebug
 ```
-

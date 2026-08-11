@@ -22,10 +22,15 @@
 本项目的关键文件是：
 
 ```text
-CounterLab-MVVM/app/src/main/java/com/example/mydemo1mvvm/MainActivity.kt
-CounterLab-MVVM/app/src/main/java/com/example/mydemo1mvvm/ui/CounterScreen.kt
-CounterLab-MVVM/app/src/main/java/com/example/mydemo1mvvm/ui/CounterViewModel.kt
-CounterLab-MVVM/app/src/main/java/com/example/mydemo1mvvm/data/CounterRepository.kt
+CounterLab-MVVM/
+└── app/src/main/java/com/example/mydemo1mvvm/
+    ├── MainActivity.kt              # Activity 宿主，连接 ViewModel 和 Compose 页面
+    ├── ui/
+    │   ├── CounterScreen.kt         # View：无状态 Composable，只显示状态和暴露事件
+    │   ├── CounterViewModel.kt      # ViewModel：持有 StateFlow，更新 CounterUiState
+    │   └── theme/                   # Compose 主题
+    └── data/
+        └── CounterRepository.kt     # Repository 接口 + InMemory 实现
 ```
 
 可以先按这个关系理解：

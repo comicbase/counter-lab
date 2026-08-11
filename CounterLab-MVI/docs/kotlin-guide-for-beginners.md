@@ -24,12 +24,17 @@ MVI 比 MVVM 多几个新词，比如 `Intent`、`State`、`Effect`、`Reducer`�
 关键文件如下：
 
 ```text
-CounterLab-MVI/app/src/main/java/com/example/mydemo1mvi/MainActivity.kt
-CounterLab-MVI/app/src/main/java/com/example/mydemo1mvi/ui/CounterScreen.kt
-CounterLab-MVI/app/src/main/java/com/example/mydemo1mvi/ui/CounterContract.kt
-CounterLab-MVI/app/src/main/java/com/example/mydemo1mvi/ui/CounterReducer.kt
-CounterLab-MVI/app/src/main/java/com/example/mydemo1mvi/ui/CounterViewModel.kt
-CounterLab-MVI/app/src/main/java/com/example/mydemo1mvi/data/CounterRepository.kt
+CounterLab-MVI/
+└── app/src/main/java/com/example/mydemo1mvi/
+    ├── MainActivity.kt              # Activity 宿主，连接 ViewModel 和 Compose 页面
+    ├── ui/
+    │   ├── CounterScreen.kt         # View：显示 State、发送 Intent、收集 Effect
+    │   ├── CounterContract.kt       # Contract：定义 State / Intent / Effect
+    │   ├── CounterReducer.kt        # Reducer：根据旧 State + Intent 计算新 State
+    │   ├── CounterViewModel.kt      # ViewModel：dispatch Intent，更新 State，发送 Effect
+    │   └── theme/                   # Compose 主题
+    └── data/
+        └── CounterRepository.kt     # Repository 接口 + InMemory 实现
 ```
 
 可以先按这个关系理解：

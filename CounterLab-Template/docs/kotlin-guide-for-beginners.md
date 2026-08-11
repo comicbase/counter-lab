@@ -17,7 +17,9 @@
 刚开始不要急着看所有文件。这个项目里最值得先看的 Kotlin 文件是：
 
 ```text
-CounterLab-Template/app/src/main/java/com/example/mydemo1/MainActivity.kt
+CounterLab-Template/
+└── app/src/main/java/com/example/mydemo1/
+    └── MainActivity.kt          # 应用入口，打开 App 后首先进入这里
 ```
 
 它是应用的入口。你可以把它理解成“App 打开后的第一个房间”。
@@ -25,9 +27,11 @@ CounterLab-Template/app/src/main/java/com/example/mydemo1/MainActivity.kt
 项目里还有几个主题文件：
 
 ```text
-CounterLab-Template/app/src/main/java/com/example/mydemo1/ui/theme/Color.kt
-CounterLab-Template/app/src/main/java/com/example/mydemo1/ui/theme/Type.kt
-CounterLab-Template/app/src/main/java/com/example/mydemo1/ui/theme/Theme.kt
+CounterLab-Template/
+└── app/src/main/java/com/example/mydemo1/ui/theme/
+    ├── Color.kt                 # 颜色定义
+    ├── Type.kt                  # 字体排版
+    └── Theme.kt                 # Compose 主题入口
 ```
 
 它们负责颜色、字体、主题风格。初学阶段不需要一上来就完全吃透，知道它们是在“给页面换皮肤”就够了。
@@ -35,8 +39,12 @@ CounterLab-Template/app/src/main/java/com/example/mydemo1/ui/theme/Theme.kt
 另外还有两个测试文件：
 
 ```text
-CounterLab-Template/app/src/test/java/com/example/mydemo1/ExampleUnitTest.kt
-CounterLab-Template/app/src/androidTest/java/com/example/mydemo1/ExampleInstrumentedTest.kt
+CounterLab-Template/
+└── app/src/
+    ├── test/java/com/example/mydemo1/
+    │   └── ExampleUnitTest.kt           # 本地 JVM 单元测试
+    └── androidTest/java/com/example/mydemo1/
+        └── ExampleInstrumentedTest.kt   # 运行在模拟器/真机上的仪器测试
 ```
 
 它们是 Android Studio 模板自动生成的示例测试。`CounterLab-Template` 还没有真实业务，所以这两个测试暂时不是重点。
