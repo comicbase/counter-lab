@@ -23,7 +23,8 @@
 
 ```text
 CounterLab-MVVM/
-└── app/src/main/java/com/example/mydemo1mvvm/
+└── app/src/main/java/com/counterlab/mvvm/
+    ├── CounterLabMvvmApplication.kt   # Application 类，应用进程入口
     ├── MainActivity.kt              # Activity 宿主，连接 ViewModel 和 Compose 页面
     ├── ui/
     │   ├── CounterScreen.kt         # View：无状态 Composable，只显示状态和暴露事件
@@ -63,7 +64,7 @@ Activity
 
 ```kotlin
 setContent {
-    MyDemo1MvvmTheme {
+    CounterLabMvvmTheme {
         val viewModel: CounterViewModel = viewModel()
         val uiState by viewModel.uiState.collectAsStateWithLifecycle()
         CounterScreen(
@@ -79,7 +80,7 @@ setContent {
 它的意思是：
 
 1. 用 `setContent` 开始写 Compose 页面；
-2. 套上项目主题 `MyDemo1MvvmTheme`；
+2. 套上项目主题 `CounterLabMvvmTheme`；
 3. 创建或取得一个 `CounterViewModel`；
 4. 从 ViewModel 里观察 `uiState`；
 5. 把状态和按钮事件都传给 `CounterScreen`。

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.mydemo1"
+    namespace = "com.counterlab.template"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.mydemo1"
+        applicationId = "com.counterlab.template"
         minSdk = 36
         targetSdk = 36
         versionCode = 1

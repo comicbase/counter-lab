@@ -27,7 +27,8 @@ MVVM 版本的核心思路是：
 
 ```text
 CounterLab-MVVM/
-├── app/src/main/java/com/example/mydemo1mvvm/
+├── app/src/main/java/com/counterlab/mvvm/
+│   ├── CounterLabMvvmApplication.kt   # Application 类，应用进程入口
 │   ├── MainActivity.kt              # Activity 宿主，连接 ViewModel 和 Compose 页面
 │   ├── ui/
 │   │   ├── CounterScreen.kt         # View：无状态 Composable

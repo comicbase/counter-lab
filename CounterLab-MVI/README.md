@@ -30,7 +30,8 @@ MVI 版本的核心思路是：
 
 ```text
 CounterLab-MVI/
-├── app/src/main/java/com/example/mydemo1mvi/
+├── app/src/main/java/com/counterlab/mvi/
+│   ├── CounterLabMviApplication.kt    # Application 类，应用进程入口
 │   ├── MainActivity.kt              # Activity 宿主，连接 ViewModel 和 Compose 页面
 │   ├── ui/
 │   │   ├── CounterScreen.kt         # View：显示 State、发送 Intent、收集 Effect

@@ -18,7 +18,7 @@
 ### 核心代码结构
 
 ```
-app/src/main/java/com/example/mydemo1mvvm/
+app/src/main/java/com/counterlab/mvvm/
 ├── MainActivity.kt              # Activity 宿主，收集 StateFlow
 ├── ui/
 │   ├── CounterViewModel.kt      # ViewModel，持有 StateFlow，直接修改状态

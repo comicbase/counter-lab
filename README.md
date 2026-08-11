@@ -120,11 +120,11 @@ compose-counter-architecture-lab/
 ```text
 compose-counter-architecture-lab/
 ├── CounterLab-MVVM/
-│   └── app/src/main/java/com/example/mydemo1mvvm/ui/
+│   └── app/src/main/java/com/counterlab/mvvm/ui/
 │       ├── CounterScreen.kt
 │       └── CounterViewModel.kt
 └── CounterLab-MVI/
-    └── app/src/main/java/com/example/mydemo1mvi/ui/
+    └── app/src/main/java/com/counterlab/mvi/ui/
         ├── CounterScreen.kt
         ├── CounterViewModel.kt
         ├── CounterContract.kt

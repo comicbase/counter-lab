@@ -18,8 +18,9 @@
 
 ```text
 CounterLab-Template/
-└── app/src/main/java/com/example/mydemo1/
-    └── MainActivity.kt          # 应用入口，打开 App 后首先进入这里
+└── app/src/main/java/com/counterlab/template/
+    ├── CounterLabTemplateApplication.kt   # Application 类，应用进程入口
+    └── MainActivity.kt                    # Activity 入口，打开 App 后首先进入这里
 ```
 
 它是应用的入口。你可以把它理解成“App 打开后的第一个房间”。
@@ -28,7 +29,7 @@ CounterLab-Template/
 
 ```text
 CounterLab-Template/
-└── app/src/main/java/com/example/mydemo1/ui/theme/
+└── app/src/main/java/com/counterlab/template/ui/theme/
     ├── Color.kt                 # 颜色定义
     ├── Type.kt                  # 字体排版
     └── Theme.kt                 # Compose 主题入口
@@ -41,9 +42,9 @@ CounterLab-Template/
 ```text
 CounterLab-Template/
 └── app/src/
-    ├── test/java/com/example/mydemo1/
+    ├── test/java/com/counterlab/template/
     │   └── ExampleUnitTest.kt           # 本地 JVM 单元测试
-    └── androidTest/java/com/example/mydemo1/
+    └── androidTest/java/com/counterlab/template/
         └── ExampleInstrumentedTest.kt   # 运行在模拟器/真机上的仪器测试
 ```
 
@@ -59,7 +60,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MyDemo1Theme {
+            CounterLabTemplateTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
                         name = "Android",
@@ -221,7 +222,7 @@ Kotlin 里常写成：
 `setContent` 里面有这样一段：
 
 ```kotlin
-MyDemo1Theme {
+CounterLabTemplateTheme {
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
         Greeting(
             name = "Android",
@@ -234,12 +235,12 @@ MyDemo1Theme {
 可以把它想成三层结构：
 
 ```text
-MyDemo1Theme       主题：颜色、字体、Material 风格
+CounterLabTemplateTheme       主题：颜色、字体、Material 风格
 └── Scaffold       页面脚手架：给页面提供基础结构
     └── Greeting   真正显示 Hello Android 的组件
 ```
 
-### `MyDemo1Theme { ... }`
+### `CounterLabTemplateTheme { ... }`
 
 这是项目自己的主题。它决定页面使用什么颜色、字体和 Material3 风格。
 
@@ -303,7 +304,7 @@ Compose 里经常看到 `Modifier.xxx().yyy().zzz()` 这样的链式写法。它
 文件开头通常会看到：
 
 ```kotlin
-package com.example.mydemo1
+package com.counterlab.template
 
 import androidx.compose.material3.Text
 ```
@@ -417,7 +418,7 @@ name: String
 
 ```kotlin
 setContent {
-    MyDemo1Theme {
+    CounterLabTemplateTheme {
         Greeting("Android")
     }
 }
@@ -556,9 +557,9 @@ plugins {
 
 ```kotlin
 android {
-    namespace = "com.example.mydemo1"
+    namespace = "com.counterlab.template"
     defaultConfig {
-        applicationId = "com.example.mydemo1"
+        applicationId = "com.counterlab.template"
         minSdk = 36
         targetSdk = 36
     }
@@ -604,7 +605,7 @@ class ExampleInstrumentedTest {
     @Test
     fun useAppContext() {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.mydemo1", appContext.packageName)
+        assertEquals("com.counterlab.template", appContext.packageName)
     }
 }
 ```
@@ -619,7 +620,7 @@ class ExampleInstrumentedTest {
 
 1. 先看 `MainActivity.kt`，理解 App 打开后显示了什么；
 2. 再看 `Greeting` 函数，理解 Compose 是用函数描述 UI；
-3. 然后看 `MyDemo1Theme`，知道主题是怎么包住页面的；
+3. 然后看 `CounterLabTemplateTheme`，知道主题是怎么包住页面的；
 4. 简单扫一眼 `Color.kt` 和 `Type.kt`，知道颜色和字体从哪里来；
 5. 最后再看 `app/build.gradle.kts`，知道依赖和 Android 配置在哪里。
 
@@ -629,7 +630,7 @@ class ExampleInstrumentedTest {
 
 这个项目的核心逻辑其实可以压缩成一句话：
 
-> Android 打开 `MainActivity`，`MainActivity` 用 Compose 的 `setContent` 设置页面内容，页面套上 `MyDemo1Theme`，最后通过 `Greeting("Android")` 显示 `Hello Android!`。
+> Android 打开 `MainActivity`，`MainActivity` 用 Compose 的 `setContent` 设置页面内容，页面套上 `CounterLabTemplateTheme`，最后通过 `Greeting("Android")` 显示 `Hello Android!`。
 
 也就是说，`CounterLab-Template` 还不是一个复杂架构项目，而是一个适合入门 Kotlin + Compose 的最小模板。
 
