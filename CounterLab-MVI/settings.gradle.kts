@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "My Demo1 MVI"
+rootProject.name = "CounterLab-MVI"
 include(":app")

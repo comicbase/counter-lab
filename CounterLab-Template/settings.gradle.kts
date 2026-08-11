@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "My Demo1"
+rootProject.name = "CounterLab-Template"
 include(":app")

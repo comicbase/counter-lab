@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "My Demo1 MVVM"
+rootProject.name = "CounterLab-MVVM"
 include(":app")
