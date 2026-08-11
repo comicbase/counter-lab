@@ -1,6 +1,6 @@
 # CounterLab-Template
 
-这是 `compose-counter-architecture-lab` 仓库里的模板起点项目。
+这是 `counter-lab` 仓库里的模板起点项目。
 
 它来自 Android Studio 新建的单模块 Jetpack Compose 模板项目，运行后只显示一行：
 

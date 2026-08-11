@@ -17,7 +17,7 @@
 ## 项目结构
 
 ```text
-compose-counter-architecture-lab/
+counter-lab/
 ├── CounterLab-Template/
 │   ├── app/
 │   ├── docs/kotlin-guide-for-beginners.md
@@ -106,7 +106,7 @@ CounterScreen(
 三份导读在这里：
 
 ```text
-compose-counter-architecture-lab/
+counter-lab/
 ├── CounterLab-Template/
 │   └── docs/kotlin-guide-for-beginners.md
 ├── CounterLab-MVVM/
@@ -118,7 +118,7 @@ compose-counter-architecture-lab/
 相关文件可以按这个结构找：
 
 ```text
-compose-counter-architecture-lab/
+counter-lab/
 ├── CounterLab-MVVM/
 │   └── app/src/main/java/com/counterlab/mvvm/ui/
 │       ├── CounterScreen.kt

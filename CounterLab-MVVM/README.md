@@ -1,6 +1,6 @@
 # CounterLab-MVVM
 
-这是 `compose-counter-architecture-lab` 仓库里的 MVVM 演进项目。
+这是 `counter-lab` 仓库里的 MVVM 演进项目。
 
 它基于 `CounterLab-Template` 这个 Android Studio 单模块 Jetpack Compose 模板项目演进而来：模板项目原本只显示 `Hello Android!`，这个版本把它改造成一个计数器示例，并使用 MVVM 分层组织代码。
 

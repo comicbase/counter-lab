@@ -1,6 +1,6 @@
 # CounterLab-Template Kotlin 初学者导读
 
-这份文档面向还没有接触过 Kotlin 的同学。它讲的是公开仓库 `compose-counter-architecture-lab` 里的模板起点项目：`CounterLab-Template`。
+这份文档面向还没有接触过 Kotlin 的同学。它讲的是公开仓库 `counter-lab` 里的模板起点项目：`CounterLab-Template`。
 
 它不会机械地逐行解释每个 `import` 或每个括号，而是挑出读懂这个项目最必要的内容，用尽量接近课堂讲解的方式说明：
 
