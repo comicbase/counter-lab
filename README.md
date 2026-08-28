@@ -157,3 +157,7 @@ cd CounterLab-MVI
 - Android Architecture：`ViewModel`、`StateFlow`
 - MVVM：View / ViewModel / Repository 的分工
 - MVI：State / Intent / Effect / Reducer 的单向数据流
+
+## License
+
+[Apache-2.0](LICENSE) © 2026 comicbase
